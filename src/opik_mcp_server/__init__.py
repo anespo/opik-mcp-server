@@ -6,8 +6,8 @@ with Strands Agents multi-agent systems, deployable on AWS Bedrock AgentCore.
 """
 
 __version__ = "1.0.0"
-__author__ = "Senior ML Engineer"
-__email__ = "engineer@company.com"
+__author__ = "Tony Esposito"
+__email__ = "tony@mydataclub.com"
 
 from .server import app
 from .models import *
