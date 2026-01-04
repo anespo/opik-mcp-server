@@ -183,7 +183,7 @@ workflow_result = await evaluate_multiagent_workflow(
 
 - **[Deployment Guide](DEPLOYMENT.md)** - Complete setup and deployment instructions
 - **[Testing Guide](REAL_TESTING_GUIDE.md)** - Real-world testing scenarios  
-- **[Project Summary](PROJECT_SUMMARY.md)** - Technical overview and architecture
+
 
 ## 🔧 Configuration
 
@@ -241,7 +241,7 @@ We welcome contributions! This project is designed to be the **definitive soluti
 ### Areas for Contribution
 
 - 🧠 **New Evaluators** - Domain-specific evaluation metrics
-- 🔌 **Framework Integrations** - LangChain, CrewAI, AutoGen support
+- 🔌 **Framework Integrations** - Strands, LangChain, CrewAI, Pydantic
 - 📊 **Analytics Features** - Advanced trend analysis and insights
 - 🚀 **Performance Optimizations** - Faster evaluation algorithms
 - 📖 **Documentation** - Tutorials, examples, best practices
@@ -263,20 +263,6 @@ uv run pytest
 uv run python -m src.opik_mcp_server.main
 ```
 
-## 📈 Roadmap
-
-- **Q1 2026**: Advanced analytics with ML-based trend analysis
-- **Q2 2026**: Custom evaluator framework and marketplace
-- **Q3 2026**: Integration with major agent frameworks
-- **Q4 2026**: Enterprise features and multi-tenant support
-
-## 🏆 Recognition
-
-This project demonstrates the power of combining:
-- **Model Context Protocol** for standardized AI tool integration
-- **Opik Platform** for comprehensive evaluation tracking
-- **AWS AgentCore** for production-ready serverless deployment
-- **Modern Observability** for real-time system insights
 
 ## 📄 License
 
