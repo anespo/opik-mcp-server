@@ -23,7 +23,7 @@ if requirements_path.exists():
 setup(
     name="opik-mcp-server",
     version="1.0.0",
-    description="Production-ready MCP server for Opik evaluation framework with Strands Agents integration",
+    description="Production-ready MCP server for Opik evaluation framework with AI agent integration",
     long_description=long_description,
     long_description_content_type="text/markdown",
     author="Senior ML Engineer",
@@ -60,7 +60,7 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
         "Topic :: System :: Monitoring",
     ],
-    keywords="opik evaluation mcp server strands agents multi-agent aws agentcore",
+    keywords="opik evaluation mcp server ai agents multi-agent aws agentcore",
     project_urls={
         "Bug Reports": "https://github.com/your-org/opik-mcp-server/issues",
         "Source": "https://github.com/your-org/opik-mcp-server",

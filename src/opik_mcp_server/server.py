@@ -16,7 +16,7 @@ from fastmcp.resources import Resource
 from fastmcp.tools import Tool
 
 from .config import settings
-from .evaluators import MultiAgentEvaluator, StrandsAgentEvaluator
+from .evaluators import MultiAgentEvaluator, AgentEvaluator
 from .models import (
     AgentConversation,
     AgentType,
@@ -40,7 +40,7 @@ total_evaluations = 0
 active_sessions = set()
 
 # Initialize evaluators
-strands_evaluator = StrandsAgentEvaluator()
+agent_evaluator = AgentEvaluator()
 multiagent_evaluator = MultiAgentEvaluator()
 
 # Initialize Bedrock client for real agent simulation
@@ -115,7 +115,7 @@ async def evaluate_agent(
     metadata: Optional[Dict[str, Any]] = None
 ) -> Dict[str, Any]:
     """
-    Evaluate a single Strands agent with multiple test cases.
+    Evaluate a single AI agent with multiple test cases.
     
     Args:
         agent_id: Unique identifier for the agent
@@ -160,7 +160,7 @@ async def evaluate_agent(
         
         # Use real LLM-powered agent function
         # Evaluate agent
-        results = await strands_evaluator.evaluate_agent(request, real_agent_function)
+        results = await agent_evaluator.evaluate_agent(request, real_agent_function)
         
         # Log results to AgentCore if enabled
         if settings.agentcore_enabled:
@@ -499,7 +499,7 @@ async def quickstart_guide() -> Resource:
 # Opik MCP Server Quickstart
 
 ## Overview
-This MCP server provides comprehensive evaluation capabilities for Strands Agents and multi-agent systems using the Opik evaluation framework.
+This MCP server provides comprehensive evaluation capabilities for AI agents and multi-agent systems using the Opik evaluation framework.
 
 ## Basic Usage
 
@@ -595,11 +595,11 @@ When deployed on AWS Bedrock AgentCore, evaluations are automatically logged to 
     )
 
 
-@app.resource("opik://examples/strands-integration")
-async def strands_integration_examples() -> Resource:
-    """Examples of integrating with Strands Agents"""
+@app.resource("opik://examples/multiagent-integration")
+async def multiagent_integration_examples() -> Resource:
+    """Examples of integrating with multi-agent systems"""
     content = """
-# Strands Agents Integration Examples
+# Multi-Agent Integration Examples
 
 ## Agent2Agent (A2A) Evaluation
 
@@ -730,9 +730,9 @@ async def evaluate_production_agent(agent_instance, test_suite):
 """
     
     return Resource(
-        uri="opik://examples/strands-integration", 
-        name="Strands Integration Examples",
-        description="Examples of evaluating Strands Agents workflows",
+        uri="opik://examples/multiagent-integration", 
+        name="Multi-Agent Integration Examples",
+        description="Examples of evaluating multi-agent workflows",
         mimeType="text/markdown",
         text=content
     )

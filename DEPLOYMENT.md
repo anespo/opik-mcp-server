@@ -300,6 +300,6 @@ aws iam get-role-policy \
 
 1. **Blog Post**: Use the generated architecture diagrams in your AWS blog post
 2. **Production Deployment**: Deploy to production environment with appropriate security controls
-3. **Client Integration**: Integrate with your client's Strands Agents workflows
+3. **Client Integration**: Integrate with your client's AI agent workflows
 4. **Monitoring**: Set up alerts and monitoring for production usage
 5. **Documentation**: Create client-specific documentation and training materials

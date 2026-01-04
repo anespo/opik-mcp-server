@@ -1,8 +1,8 @@
 """
-Opik MCP Server for Strands Agents Evaluation
+Opik MCP Server for AI Agent Evaluation
 
 A production-ready MCP server that integrates Opik evaluation framework 
-with Strands Agents multi-agent systems, deployable on AWS Bedrock AgentCore.
+with AI agents and multi-agent systems, deployable on AWS Bedrock AgentCore.
 """
 
 __version__ = "1.0.0"
@@ -20,6 +20,6 @@ __all__ = [
     "MultiAgentEvaluationRequest",
     "AgentConversation",
     "OpikEvaluator",
-    "StrandsAgentEvaluator",
+    "AgentEvaluator",
     "MultiAgentEvaluator"
 ]

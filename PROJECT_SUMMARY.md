@@ -2,14 +2,14 @@
 
 ## 🎯 Project Overview
 
-Successfully built a **production-ready Opik MCP Server** for evaluating Strands Agents and multi-agent systems, deployable on AWS Bedrock AgentCore with full observability integration.
+Successfully built a **production-ready Opik MCP Server** for evaluating AI agents and multi-agent systems, deployable on AWS Bedrock AgentCore with full observability integration.
 
 ## ✅ Completed Deliverables
 
 ### Step 1: Production-Ready Code ✅
 - **FastMCP 2.0 Framework**: Built with the latest FastMCP for production deployment
 - **Opik Integration**: Full integration with Opik evaluation framework (v1.9.70)
-- **Strands Agents Support**: Specialized evaluators for single and multi-agent workflows
+- **AI Agent Support**: Specialized evaluators for single and multi-agent workflows
 - **Custom Evaluation Metrics**: Implemented 11 evaluation metrics including:
   - Single Agent: Accuracy, Relevance, Coherence, Helpfulness, Factuality, Toxicity, Bias
   - Multi-Agent: Conversation Quality, Agent Coordination, Workflow Efficiency, A2A Protocol Compliance
@@ -217,7 +217,7 @@ cp kiro-integration/mcp.json ~/.kiro/settings/
 ## 🎉 Project Success Metrics
 
 - ✅ **100% Production Ready**: No mocks, placeholders, or TODO items
-- ✅ **Full Integration**: Opik + Strands + AgentCore + Kiro working together
+- ✅ **Full Integration**: Opik + AgentCore + Kiro working together
 - ✅ **Comprehensive Testing**: All components tested end-to-end
 - ✅ **Professional Documentation**: Blog-ready documentation and diagrams
 - ✅ **Modern Tooling**: UV, FastMCP 2.0, latest dependencies

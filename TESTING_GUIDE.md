@@ -23,7 +23,7 @@ cp kiro-integration/mcp.json ~/.kiro/settings/
 In Kiro chat, run:
 
 ```
-Evaluate my Strands customer service agent with accuracy and relevance metrics using these test cases:
+Evaluate my customer service agent with accuracy and relevance metrics using these test cases:
 
 Test Case 1:
 - Input: "I need help with my order #12345. It hasn't arrived yet."
@@ -83,7 +83,7 @@ Visit: https://console.aws.amazon.com/cloudwatch/home?region=eu-west-1#gen-ai-ob
 1. Login to Opik: https://www.comet.com/opik
 2. Navigate to your workspace
 3. Check projects:
-   - `strands-agents-evaluation`
+   - `ai-agents-evaluation`
    - `customer-service-agent-test`
 4. View trace details, metrics, and evaluation results
 

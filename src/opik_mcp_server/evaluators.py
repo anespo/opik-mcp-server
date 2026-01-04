@@ -542,8 +542,8 @@ class OpikEvaluator:
         )
 
 
-class StrandsAgentEvaluator(OpikEvaluator):
-    """Evaluator specialized for Strands Agents with Claude 3.5 Sonnet LLM evaluation"""
+class AgentEvaluator(OpikEvaluator):
+    """Evaluator for AI agents with Claude 3.5 Sonnet LLM evaluation"""
     
     @track(project_name="opik-mcp-evaluations")
     async def evaluate_agent(
@@ -551,7 +551,7 @@ class StrandsAgentEvaluator(OpikEvaluator):
         request: EvaluationRequest,
         agent_function: callable
     ) -> List[EvaluationResult]:
-        """Evaluate a Strands agent with multiple test cases"""
+        """Evaluate an AI agent with multiple test cases"""
         results = []
         
         # Create Opik experiment

@@ -170,7 +170,7 @@ async def test_single_agent_evaluation():
     print("🧪 Testing single agent evaluation...")
     
     # Import evaluator classes directly
-    from opik_mcp_server.evaluators import StrandsAgentEvaluator
+    from opik_mcp_server.evaluators import AgentEvaluator
     from opik_mcp_server.models import EvaluationRequest, TestCase, EvaluationMetric
     
     test_cases = [
@@ -203,7 +203,7 @@ async def test_single_agent_evaluation():
         await asyncio.sleep(0.1)  # Simulate processing
         return f"Mock agent response to: {input_text}"
     
-    evaluator = StrandsAgentEvaluator()
+    evaluator = AgentEvaluator()
     results = await evaluator.evaluate_agent(request, mock_agent_function)
     
     # Convert to summary format

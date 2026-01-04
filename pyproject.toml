@@ -15,7 +15,7 @@ dev = [
 [project]
 name = "opik-mcp-server"
 version = "1.0.0"
-description = "Production-ready MCP server for Opik evaluation framework with Strands Agents integration"
+description = "Production-ready MCP server for Opik evaluation framework with AI agent integration"
 authors = [
     {name = "Senior ML Engineer", email = "engineer@company.com"}
 ]
