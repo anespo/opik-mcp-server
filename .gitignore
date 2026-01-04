@@ -1,0 +1,72 @@
+# Environment files
+.env
+.env.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# UV
+uv.lock
+
+# Logs
+*.log
+
+# AWS
+.aws/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Generated diagrams (keep these for the repo)
+# generated-diagrams/
+
+# Backup files
+*-backup/
+
+# Blog article (keep local only)
+BLOG_ARTICLE.md
+
+# Personal notes and drafts
+notes/
+drafts/
+
+# Local configuration overrides
+config.local.*
+settings.local.*

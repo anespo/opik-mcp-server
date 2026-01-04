@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "opik-evaluation": {
+      "command": "uv",
+      "args": ["run", "--project", "yourlocaldirectory/opik-mcp-agentcore", "python", "-m", "opik_mcp_server.main"],
+      "cwd": "yourlocaldirectory/opik-mcp-agentcore",
+      "env": {
+        "OPIK_API_KEY": "YOUR_OPIK_API_KEY",
+        "OPIK_WORKSPACE": "default",
+        "AWS_REGION": "eu-west-1",
+        "AWS_PROFILE": "default",
+        "AGENTCORE_ENABLED": "false",
+        "LOG_LEVEL": "INFO",
+        "FASTMCP_LOG_LEVEL": "INFO"
+      },
+      "disabled": false,
+      "autoApprove": [
+        "evaluate_agent",
+        "evaluate_multiagent_workflow",
+        "get_evaluation_metrics",
+        "get_server_status",
+        "create_test_data",
+        "batch_evaluate_agents"
+      ]
+    }
+  }
+}

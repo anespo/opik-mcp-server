@@ -1,0 +1,66 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "CloudWatchLogsAccess",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogGroup",
+        "logs:CreateLogStream",
+        "logs:PutLogEvents",
+        "logs:DescribeLogGroups",
+        "logs:DescribeLogStreams",
+        "logs:TagResource",
+        "logs:UntagResource",
+        "logs:ListTagsLogGroup"
+      ],
+      "Resource": [
+        "arn:aws:logs:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:log-group:/aws/bedrock-agentcore/opik-evaluations",
+        "arn:aws:logs:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:log-group:/aws/bedrock-agentcore/opik-evaluations:*"
+      ]
+    },
+    {
+      "Sid": "CloudWatchMetricsAccess",
+      "Effect": "Allow",
+      "Action": [
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricStatistics",
+        "cloudwatch:ListMetrics"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringEquals": {
+          "cloudwatch:namespace": [
+            "OpikMCP/Evaluations",
+            "OpikMCP/BatchEvaluations",
+            "OpikMCP/Custom"
+          ]
+        }
+      }
+    },
+    {
+      "Sid": "XRayTracingAccess",
+      "Effect": "Allow",
+      "Action": [
+        "xray:PutTraceSegments",
+        "xray:PutTelemetryRecords",
+        "xray:GetSamplingRules",
+        "xray:GetSamplingTargets",
+        "xray:GetSamplingStatisticSummaries"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Sid": "BedrockAgentCoreAccess",
+      "Effect": "Allow",
+      "Action": [
+        "bedrock-agentcore:InvokeAgent",
+        "bedrock-agentcore:GetAgent",
+        "bedrock-agentcore:ListAgents"
+      ],
+      "Resource": [
+        "arn:aws:bedrock-agentcore:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:runtime/opik_mcp_server-*"
+      ]
+    }
+  ]
+}

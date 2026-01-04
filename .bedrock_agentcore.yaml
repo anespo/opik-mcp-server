@@ -1,0 +1,54 @@
+default_agent: opik_mcp_server
+agents:
+  opik_mcp_server:
+    name: opik_mcp_server
+    entrypoint: src/opik_mcp_server/main.py
+    deployment_type: container
+    runtime_type: null
+    platform: linux/arm64
+    container_runtime: none
+    source_path: /path/to/your/project/opik-mcp-server
+    aws:
+      execution_role: arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/AmazonBedrockAgentCoreSDKRuntime-YOUR_AWS_REGION-XXXXX
+      execution_role_auto_create: false
+      account: YOUR_AWS_ACCOUNT_ID
+      region: YOUR_AWS_REGION
+      ecr_repository: YOUR_AWS_ACCOUNT_ID.dkr.ecr.YOUR_AWS_REGION.amazonaws.com/bedrock-agentcore-opik_mcp_server
+      ecr_auto_create: true
+      s3_path: null
+      s3_auto_create: false
+      network_configuration:
+        network_mode: PUBLIC
+        network_mode_config: null
+      protocol_configuration:
+        server_protocol: MCP
+      observability:
+        enabled: true
+      lifecycle_configuration:
+        idle_runtime_session_timeout: null
+        max_lifetime: null
+    bedrock_agentcore:
+      agent_id: opik_mcp_server-XXXXX
+      agent_arn: arn:aws:bedrock-agentcore:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:runtime/opik_mcp_server-XXXXX
+      agent_session_id: XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
+    codebuild:
+      project_name: bedrock-agentcore-opik_mcp_server-builder
+      execution_role: arn:aws:iam::YOUR_AWS_ACCOUNT_ID:role/AmazonBedrockAgentCoreSDKCodeBuild-YOUR_AWS_REGION-XXXXX
+      source_bucket: bedrock-agentcore-codebuild-sources-YOUR_AWS_ACCOUNT_ID-YOUR_AWS_REGION
+    memory:
+      mode: STM_ONLY
+      memory_id: opik_mcp_server_mem-XXXXX
+      memory_arn: arn:aws:bedrock-agentcore:YOUR_AWS_REGION:YOUR_AWS_ACCOUNT_ID:memory/opik_mcp_server_mem-XXXXX
+      memory_name: opik_mcp_server_mem
+      event_expiry_days: 30
+      first_invoke_memory_check_done: true
+      was_created_by_toolkit: true
+    identity:
+      credential_providers: []
+      workload: null
+    authorizer_configuration: null
+    request_header_configuration: null
+    oauth_configuration: null
+    api_key_env_var_name: null
+    api_key_credential_provider_name: null
+    is_generated_by_agentcore_create: false
