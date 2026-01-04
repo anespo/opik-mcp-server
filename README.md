@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Architecture](./generated-diagrams/diagram_e4cc14ab.png)
+![Architecture](./diagrams/opik_mcp_server_architecture_on_aws_agentcore.png)
 
 [![License: MIT-0](https://img.shields.io/badge/License-MIT--0-blue.svg)](LICENSE)
 [![AWS AgentCore](https://img.shields.io/badge/AWS-AgentCore-orange.svg)](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-agentcore.html)
