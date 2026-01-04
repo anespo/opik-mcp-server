@@ -50,7 +50,7 @@ def generate_diagram():
                     dashboard = Cloudwatch("GenAI Observability\\nDashboard")
                     
                 with Cluster("AI/ML Services"):
-                    bedrock_models = Bedrock("Bedrock Models\\n(Claude 3.5, Nova)")
+                    bedrock_models = Bedrock("Bedrock Models\\n(Claude 3.5 Sonnet, Nova)")
                     
             with Cluster("Opik Platform"):
                 opik_api = Server("Opik API\\n(Evaluation Framework)")
