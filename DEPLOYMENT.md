@@ -12,7 +12,7 @@ This guide walks you through deploying the Opik MCP Server to AWS Bedrock AgentC
 
 ### 2. Opik Setup
 - Opik account created at [comet.com](https://www.comet.com/opik)
-- API key obtained: `HSUAK9vFPSkqp3y0REqn2X0coY`
+- API key obtained: `YOUR API KEY`
 
 ### 3. Development Environment
 - Python 3.11 or higher
@@ -178,15 +178,7 @@ uv run agentcore test --name opik-mcp-server --region eu-west-1
 ## Step 5: Architecture Diagram
 
 ### Generate Diagrams
-```bash
-# Install diagram dependencies (included in dev dependencies)
-uv sync --dev
 
-# Generate architecture diagrams
-uv run python scripts/generate-architecture-diagram.py
-```
-
-This creates:
 - `diagrams/opik_mcp_server_architecture_on_aws_agentcore.png`
 - `diagrams/opik_mcp_server_evaluation_flow.png`
 
@@ -295,11 +287,3 @@ aws iam get-role-policy \
 - Monitor security advisories
 - Backup evaluation data and configurations
 - Test disaster recovery procedures
-
-## Next Steps
-
-1. **Blog Post**: Use the generated architecture diagrams in your AWS blog post
-2. **Production Deployment**: Deploy to production environment with appropriate security controls
-3. **Client Integration**: Integrate with your client's AI agent workflows
-4. **Monitoring**: Set up alerts and monitoring for production usage
-5. **Documentation**: Create client-specific documentation and training materials
